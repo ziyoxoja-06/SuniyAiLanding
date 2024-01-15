@@ -19,7 +19,7 @@ onBeforeUnmount(()=>{
 </script>
 
 <template>
-    <div class="overflow-hidden fixed top-0 left-0 right-0 bg-grey-100 dark:bg-gray-900 z-50 transition-all duration-500"
+    <div class="overflow-hidden bg-[#1E212C] fixed top-0 left-0 right-0 bg-gray-100 dark:bg-gray-900 z-50 transition-all duration-500"
     :class="responsive<740&&sitebar?'h-[70px] sm:h-[10vh] md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0':'h-full sm:h-full md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0'">
         <div class="container  mx-auto flex flex-col sm:flex-col md:flex-row xl:flex-row items-center h-full justify-between">
             <div class="w-full sm:w-full md:w-auto xl:w-auto flex justify-between">
