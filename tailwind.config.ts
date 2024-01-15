@@ -1,6 +1,14 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
     screens: {
         sm_sm: '360px',
@@ -12,10 +20,6 @@ export default <Partial<Config>>{
         lg: '1440px',
         xl: '1910px',
         xxl: '2300px',
-      },
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
       },
       variants: {
         fill: ['hover', 'focus'], // this line does the trick

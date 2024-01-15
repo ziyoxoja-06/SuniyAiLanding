@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@nuxt/ui', '@nuxt/image']
+  css: ['~/assets/css/main.css'],
+  modules: [ //'@nuxtjs/i18n'
+],
+  // i18n: {
+  //   vueI18n: './i18n.config.js'
+  // },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 })
