@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+import MainNavbar from './components/MainNavbar.vue';
 </script>
 
 <template>
-  <div>
-    <h2>Hello World</h2>
+  <div class="h-[2500px]">
+    <MainNavbar/>
   </div>
 </template>

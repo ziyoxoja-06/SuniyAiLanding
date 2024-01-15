@@ -1,9 +1,8 @@
-import type { Config } from 'tailwindcss'
+/** @type {import('tailwindcss').Config} */
 
-export default <Partial<Config>>{
+module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./app.vue",
@@ -20,7 +19,7 @@ export default <Partial<Config>>{
         lg: '1440px',
         xl: '1910px',
         xxl: '2300px',
-      },
+    },    
       variants: {
         fill: ['hover', 'focus'], // this line does the trick
       },

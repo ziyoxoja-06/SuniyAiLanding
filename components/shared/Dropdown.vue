@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+
 const items = [
   [{
     label: 'Profile'
@@ -7,9 +8,6 @@ const items = [
 
 const open = ref(true)
 
-defineShortcuts({
-  o: () => open.value = !open.value
-})
 </script>
 
 <template>
