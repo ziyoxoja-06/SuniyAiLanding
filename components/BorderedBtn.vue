@@ -1,12 +1,13 @@
-<script setup lang="ts">
+<script setup>
+import { defineProps } from 'vue'
 const props = defineProps({
   title: {
     default: 'Click',
     type: String,
   },
-  id:{
-    default:'btn_left',
-    type:String
+  id: {
+    default: 'btn_left',
+    type: String
   }
 })
 </script>
@@ -14,8 +15,7 @@ const props = defineProps({
   <button :id="id">{{ props?.title }}</button>
 </template>
 
-<style scoped lang="scss">
-
+<style scoped >
 #btn_left {
   padding: 5px 15px;
   position: relative;
@@ -32,24 +32,25 @@ const props = defineProps({
   overflow: hidden;
   transition: .5s;
   z-index: 1;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:#00abf0;
-    animation: showRight 1s ease backwards;
-    animation-delay: 2.5s;transition: 1s;
-    z-index: -1;
-  }
+#btn_left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  animation: showRight 1s ease backwards;
+  animation-delay: 2.5s;
+  transition: 1s;
+  z-index: -1;
+}
 
-  &:hover::before {
-    width: 100%;
-    color: #fff;
-  }
+#btn_left:hover::before {
+  width: 100%;
+  color: #fff;
 }
 
 #btn_right {
@@ -68,27 +69,30 @@ const props = defineProps({
   overflow: hidden;
   transition: .5s;
   z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background:#00abf0;
-    animation: showRight 1s ease backwards;
-    animation-delay: 2.5s;transition: 1s;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-  &:hover{
-    color: #fff;
-  }
 }
+
+#btn_right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  animation: showRight 1s ease backwards;
+  animation-delay: 2.5s;
+  transition: 1s;
+  z-index: -1;
+}
+
+#btn_right:hover::before {
+  width: 100%;
+}
+
+#btn_right:hover {
+  color: #fff;
+}
+
 #btn_full {
   padding: 5px 15px;
   position: relative;
@@ -105,8 +109,9 @@ const props = defineProps({
   overflow: hidden;
   transition: .5s;
   z-index: 1;
+}
 
-  &::before {
+#btn_full::before {
     content: '';
     position: absolute;
     top: 0;
@@ -115,15 +120,14 @@ const props = defineProps({
     height: 100%;
     background: #2e2f2f;
     animation: showRight 1s ease backwards;
-    animation-delay: 2.5s;transition: 1s;
+    animation-delay: 2.5s;
+    transition: 1s;
     z-index: -1;
   }
-
-  &:hover::before {
-        width: 100%;
-    }
-  &:hover{
+#btn_full:hover::before {
+    width: 100%;
+  }
+#btn_full:hover {
     color: #00abf0;
   }
-}
 </style>

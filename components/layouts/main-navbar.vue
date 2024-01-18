@@ -1,7 +1,6 @@
-<script setup lang="ts">
-import {ref} from 'vue'
+<script setup>
 const sitebar = ref(true)
-const responsive = ref<number>(0)
+const responsive = ref(null)
 
 function responsiveFn() {
     responsive.value = window.innerWidth
@@ -20,11 +19,11 @@ onBeforeUnmount(()=>{
 </script>
 
 <template>
-    <div class="overflow-hidden bg-[#1E212C] fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+    <div class="overflow-hidden bg-[#1E212C] fixed top-0 left-0 right-0 bg-gray-100 dark:bg-gray-900 z-50 transition-all duration-500"
     :class="responsive<740&&sitebar?'h-[70px] sm:h-[10vh] md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0':'h-full sm:h-full md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0'">
         <div class="container  mx-auto flex flex-col sm:flex-col md:flex-row xl:flex-row items-center h-full justify-between">
-            <div class="w-full sm:w-full md:w-auto xl:w-auto flex justify-between ">
-              <NuxtLink to="/" class="flex items-center">
+            <div class="w-full sm:w-full md:w-auto xl:w-auto flex justify-between">
+              <NuxtLink to="/" class="flex items-center pl-2">
                 <NuxtImg src="/logo.svg" width="100" />
             </NuxtLink>  
             <button
@@ -53,17 +52,17 @@ onBeforeUnmount(()=>{
           </button>
             </div>
             
-            <div class="w-full sm:w-full md:w-auto xl:w-auto h-full sm:h-full md:h-auto xl:h-auto flex items-center  md:space-x-4 xl:space-x-4 flex-col sm:flex-col md:flex-row xl:flex-row">
-                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
+            <div class="w-full sm:w-full md:w-auto xl:w-auto  h-full sm:h-full md:h-auto xl:h-auto flex items-center  md:space-x-4 xl:space-x-4 flex-col sm:flex-col md:flex-row xl:flex-row">
+                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 mt-5 sm:my-2 sm:mt-5 md:my-0 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
                     Home 
                 </NuxtLink>
-                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
+                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
                     About
                 </NuxtLink>
-                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
+                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
                     Services
                 </NuxtLink>
-                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
+                <NuxtLink to="/auth" class="py-4 sm:py-4 md:py-0 xl:py-0 my-1 sm:my-2 md:my-0 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
                     Prising
                 </NuxtLink>
                 <SharedAnimationBtn title="Buyurtma berish" />
