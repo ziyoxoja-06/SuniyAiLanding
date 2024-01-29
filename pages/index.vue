@@ -72,10 +72,10 @@ function strCut(count: number, text: string = "") {
   <!-- HERO SECTION  -->
   <section
     id="home"
-    class="flex items-center flex-col sm:flex-col md:flex-row xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C] bg-[url('baseBg.svg')]"
+    class="flex items-center flex-col sm:flex-col md:flex-col xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C] bg-[url('baseBg.svg')]"
   >
     <div
-      class="px-4 sm:pl-2 md:pl-10 xl:pl-10 pt-20 sm:pt-20 md:pt-0 xl:pt-0 flex flex-col space-y-3 w-[100vw] sm:w-[100vw] md:w-[50%] xl:w-[50%]"
+      class="px-4 sm:pl-2 md:pl-10 xl:pl-10 pt-20 sm:pt-20 md:pt-20 xl:pt-0 flex flex-col space-y-3 w-[100vw] sm:w-[100vw] md:[100vw] xl:w-[50%]"
     >
       <h1
         class="home__title text-white text-[34px] sm:text-[34px] md:text-[46px] xl:text-[46px] leading-[36px] sm:leading-[46px] md:leading-[56px] xl:leading-[56px] font-medium font-['Overpass'] mt-10"
@@ -104,24 +104,24 @@ function strCut(count: number, text: string = "") {
     </div>
     <NuxtImg
       src="/HomeHande.svg"
-      class="w-[100vw] sm:w-[100vw] md:w-[50%] xl:w-[50%] mt-10"
+      class="w-[100vw] sm:w-[100vw] md:w-[100vw] xl:w-[50%] mt-10"
     />
   </section>
 
   <!-- About start-->
   <section
     id="about"
-    class="flex items-center flex-col sm:flex-col md:flex-row xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C]"
+    class="flex items-center flex-col sm:flex-col md:flex-col xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C]"
   >
     <div
-      class="flex md:justify-start lg:justify-start xl:justify-start ml-1 sm:ml-1 md:ml-10 xl:ml-10 w-[90vw] sm:w-[90vw] md:w-[50%] xl:w-[50%]"
+      class="flex md:justify-start lg:justify-start xl:justify-start ml-1 sm:ml-1 md:ml-1 xl:ml-10 w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[50%] xl:w-[50%]"
     >
       <!-- About IMG -->
-      <NuxtImg src="/about.png" class="w-[100%] h-[450px]" />
+      <NuxtImg src="/about.png" class="w-[100%] h-[450px] md:mt-16 lg:mt-1 xl:mt-1" />
     </div>
 
     <div
-      class="flex flex-col space-y-2 w-[90vw] sm:w-[90vw] md:w-[50%] xl:w-[50%] mx-3 sm:mx-3 md:mx-8 xl:mx-8 -order-1 sm:-order-1 md:order-2 xl:order-2"
+      class="flex flex-col space-y-2 w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[50%] xl:w-[50%] mx-3 sm:mx-3 md:mx-8 xl:mx-8 -order-1 sm:-order-1 md:-order-1 lg:order-2 xl:order-2"
     >
       <h1
         class="text-[32px] sm:text-[32px] md:text-[44px] xl:text-[54px] leading-[40px] font-semibold font-['Overpass']"
@@ -142,10 +142,10 @@ function strCut(count: number, text: string = "") {
         o'zimizga bo'lgan talabimizni oshiradi. Biz ming yillik insoniy
         an'analarga asoslangan munosabatlar asosida hamkorlik qilamiz.
       </p>
-      <div class="h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div>
+      <div class="h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div><img src="/call.svg" alt="img"/> 
       <div class="pt-[10px] flex space-x-4">
-        <BorderedBtn :title="'Portfolio'" />
-        <BorderedBtn :title="'Qo’ng’iroq'" />
+        <BorderedBtn :title="'Portfolio'" ><img src="/arrow.svg" alt="img"></BorderedBtn>
+        <BorderedBtn :title="'Qo’ng’iroq'" ><img src="/call.svg" alt=""></BorderedBtn>
       </div>
     </div>
   </section>
@@ -214,10 +214,10 @@ function strCut(count: number, text: string = "") {
         class="w-full p-2 sm:p-2 md:p-4 xl:p-12 py-2 md:py-16 lg:py-16 xl:py-16 px-2 md:px-5 lg:px-5 xl:px-5 bg-[#1E212C] h-fit"
       >
         <div
-          class="w-full min-h-[259px] flex flex-wrap bg-gray-800 rounded-[20px] border border-teal-400 py-2 md:py-10 lg:py-10 xl:py-10 px-2 md:px-16 lg:px-16 xl:px-16"
+          class="w-full min-h-[259px] flex flex-wrap bg-gray-800 rounded-[20px] border border-teal-400 py-4 md:py-10 lg:py-10 xl:py-10 px-4 md:px-16 lg:px-16 xl:px-16"
         >
-          <div class="w-[58%] ">
-            <h2 class="text-white text-[40px] font-semibold font-['Overpass']">
+          <div class="w-[100%] sm:w-[100%] md:w-[58%] xl:w-[58%]">
+            <h2 class="text-white text-[30px] sm:text-[30px] md:text-[40px] xl:text-[40px] font-semibold font-['Overpass']">
               Siz ham ushbu jamoa orasida bo'lishingiz mumkin...
             </h2>
             <div
@@ -228,28 +228,28 @@ function strCut(count: number, text: string = "") {
             </div>
           </div>
           <div
-            class="w-auto flex flex-col space-y-4 justify-center items-start ml-24"
+            class="w-auto flex flex-col space-y-4 justify-center items-start md:items-center lg:items-start xl:items-start ml-0 md:ml-0 lg:ml-24 xl:ml-24 my-10 sm:my-10 md:my-0 xl:my-0"
           >
-            <div class="flex items-center space-x-2">
-              <div class="w-[50px] h-0.5 bg-zinc-300"></div>
+            <div class="flex  items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
+              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Big data
               </div>
             </div>
-            <div class="flex items-center space-x-2">
-              <div class="w-[50px] h-0.5 bg-zinc-300"></div>
+            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
+              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Ved development
               </div>
             </div>
-            <div class="flex items-center space-x-2">
-              <div class="w-[50px] h-0.5 bg-zinc-300"></div>
+            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
+              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 AI ingineering
               </div>
             </div>
-            <div class="flex items-center space-x-2">
-              <div class="w-[50px] h-0.5 bg-zinc-300"></div>
+            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
+              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Android & IOS
               </div>
@@ -271,37 +271,57 @@ function strCut(count: number, text: string = "") {
       <div class="w-[100%] sm:w-[100%] md:w-[40%] xl:w-[40%] h-auto py-5">
         <NuxtImg src="/logo.svg" width="180" />
         <div
-          class="w-[400px] h-[71.90px] text-white text-3xl mt-5 font-semibold font-['Inter']"
+          class="w-[100%] sm:w-[100%] md:w-[100%] xl:w-[400px] h-[71.90px] text-white text-3xl mt-5 font-semibold font-['Inter']"
         >
           Biznesingiz uchun dasturiy yechimlar
         </div>
-        <div class="w-[370px] h-0.5 bg-neutral-400 my-5"></div>
-        <div class="w-[370px] flex space-x-2">
-          <span class="text-white text-[26px] font-bold font-['Inter']"
+        <div
+          class="w-[100%] sm:w-[100%] md:w-[100%] xl:w-[370px] h-0.5 bg-neutral-400 my-5"
+        ></div>
+        <div
+          class="w-[100%] sm:w-[100%] md:w-[100%] xl:w-[370px] flex space-x-2"
+        >
+          <span
+            class="text-white text-[20px] sm:text-[20px] md:text-[20px] xl:text-[26px] font-bold font-['Inter']"
             >El-pochta:</span
-          ><span class="text-white text-[26px] font-medium font-['Inter']"
-            >SuniyX@mail.uz</span
+          >
+          <NuxtLink
+            class="text-white text-[20px] sm:text-[20px] md:text-[20px] xl:text-[26px] font-medium font-['Inter']"
+            to="mailto:SuniyX@mail.uz"
+            target="_blank"
+            >SuniyX@mail.uz</NuxtLink
           >
         </div>
         <div class="w-auto flex space-x-2">
-          <span class="text-white text-[26px] font-bold font-['Inter']"
+          <span
+            class="text-white text-[20px] sm:text-[20px] md:text-[20px] xl:text-[26px] font-bold font-['Inter']"
             >Tel raqam:</span
-          ><span class="text-white text-[26px] font-medium font-['Inter']"
-            >+998 90 123 45 67</span
           >
+          <NuxtLink
+            class="text-white text-[20px] sm:text-[20px] md:text-[20px] xl:text-[26px] font-medium font-['Inter']"
+            to="tel:+998 90
+            123 45 67"
+            target="_blank"
+            >+998 90 123 45 67</NuxtLink
+          >
+          <span
+            class="text-white text-[20px] sm:text-[20px] md:text-[26px] xl:text-[26px] font-medium font-['Inter']"
+          ></span>
         </div>
 
         <!-- icons group -->
         <div class="flex space-x-12 mt-5">
           <div class="flex items-center space-x-2">
             <img src="/telegram.svg" class="w-11 h-11" />
-            <span class="text-white text-[22px] font-semibold font-['Inter']"
+            <span
+              class="text-white text-[16px] sm:text-[16px] md:text-[22px] xl:text-[22px] font-semibold font-['Inter']"
               >Telegram</span
             >
           </div>
           <div class="flex items-center space-x-2">
             <img src="/instagram.svg" class="w-11 h-11" />
-            <span class="text-white text-[22px] font-semibold font-['Inter']"
+            <span
+              class="text-white text-[16px] sm:text-[16px] md:text-[22px] xl:text-[22px] font-semibold font-['Inter']"
               >Instagram</span
             >
           </div>
@@ -310,13 +330,15 @@ function strCut(count: number, text: string = "") {
         <div class="flex space-x-12 mt-5">
           <div class="flex items-center space-x-2">
             <img src="/facebook.svg" class="w-11 h-11" />
-            <span class="text-white text-[22px] font-semibold font-['Inter']"
+            <span
+              class="text-white text-[16px] sm:text-[16px] md:text-[22px] font-semibold font-['Inter']"
               >Facebook</span
             >
           </div>
           <div class="flex items-center space-x-2">
             <img src="/youtube.svg" class="w-11 h-11" />
-            <span class="text-white text-[22px] font-semibold font-['Inter']"
+            <span
+              class="text-white text-[16px] sm:text-[16px] md:text-[22px] font-semibold font-['Inter']"
               >You Tube</span
             >
           </div>
@@ -324,9 +346,11 @@ function strCut(count: number, text: string = "") {
       </div>
 
       <!-- Input group -->
-      <div class="w-[100%] sm:w-[100%] md:w-[60%] xl:w-[60%] pl-0 sm:pl-0 md:pl-20 xl:pl-20 py-5">
+      <div
+        class="w-[100%] sm:w-[100%] md:w-[60%] xl:w-[60%] pl-0 sm:pl-0 md:pl-20 xl:pl-20 py-5"
+      >
         <div
-          class="h-[50.93px] text-white text-[40px] font-bold font-['Overpass']"
+          class="text-white text-[30px] sm:text-[30px] md:text-[40px] xl:text-[40px] font-bold font-['Overpass']"
         >
           Biz bilan bog’laning
         </div>

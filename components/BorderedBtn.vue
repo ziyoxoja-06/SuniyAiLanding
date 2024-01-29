@@ -8,11 +8,15 @@ const props = defineProps({
   id: {
     default: 'btn_left',
     type: String
+  },
+  classEl: {
+    default: ' flex justify-center items-center',
+    type: String
   }
 })
 </script>
 <template>
-  <button :id="id">{{ props?.title }}</button>
+  <button :id="id" :class="classEl">{{ props?.title }} <slot ></slot></button>
 </template>
 
 <style scoped >
