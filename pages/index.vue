@@ -31,11 +31,9 @@ const services = [
 const partfoliyo = [
   {
     title: "Suniy TV",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            officiis possimus doloremque quae! Aliquid, quasi! Reprehenderit,
-            impedit eius similique repudiandae facere a excepturi quas totam
-            nulla amet est provident maxime?`,
-    img: "/partfoliyo_1.jpg",
+    description: `SuniyX jamoasi Suniy TV loyihasini omaga taqdim etishga tayorlanmoqda. Bu loyihamiz anchadan beri o'zgartirish
+     kiritilmagan media uchun yangilik hisoblanadi. Smart TV va Suniy intelect texnalogiyasini birlashtiradi`,
+    img: "/partfoliyo_1.webp",
   },
   {
     title: "Suniy TV",
@@ -43,7 +41,7 @@ const partfoliyo = [
             officiis possimus doloremque quae! Aliquid, quasi! Reprehenderit,
             impedit eius similique repudiandae facere a excepturi quas totam
             nulla amet est provident maxime?`,
-    img: "/partfoliyo_2.jpg",
+    img: "/partfoliyo_2.webp",
   },
   {
     title: "Suniy TV",
@@ -51,7 +49,7 @@ const partfoliyo = [
             officiis possimus doloremque quae! Aliquid, quasi! Reprehenderit,
             impedit eius similique repudiandae facere a excepturi quas totam
             nulla amet est provident maxime?`,
-    img: "/partfoliyo_2.jpg",
+    img: "/partfoliyo_2.webp",
   },
   {
     title: "Suniy TV",
@@ -59,7 +57,7 @@ const partfoliyo = [
             officiis possimus doloremque quae! Aliquid, quasi! Reprehenderit,
             impedit eius similique repudiandae facere a excepturi quas totam
             nulla amet est provident maxime?`,
-    img: "/partfoliyo_3.jpeg",
+    img: "/partfoliyo_3.webp",
   },
 ];
 
@@ -87,24 +85,32 @@ function strCut(count: number, text: string = "") {
         >
         bilan noyob g'oyalaringizni amalga oshirish imkoni bor.
       </h1>
-      <div
-        class="w-[100%] text-white text-opacity-90 text-[20px] sm:text-[20px] md:text-md xl:text-md font-normal font-['Inter'] leading-relaxed"
+      <p
+        class="w-full text-white text-opacity-90 text-[16px] sm:text-[16px] md:text-[20px] xl:text-[20px] md:text-md xl:text-md font-normal font-['Inter'] leading-relaxed"
       >
         Biz eng yaxshi amaliyot jarayonlari va ishlab chiqish metodologiyalarini
         zamonaviy texnologik echimlarni tizimli va uslubiy jihatdan tezkor
         qurish uchun asos sifatida ishlatamiz.
-      </div>
+      </p>
       <div
         class="w-[90vw] sm:w-[90vw] md:w-[40vw] xl:w-[40vw] h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"
       ></div>
       <div class="pt-[10px] flex space-x-4">
-        <BorderedBtn :title="'Portfolio'" />
-        <BorderedBtn :title="'Qo’ng’iroq'" />
+        <BorderedBtn :title="'Portfolio'"
+          ><img class="ml-2" src="/arrow.svg" alt="Suniy arrow"
+        /></BorderedBtn>
+        <BorderedBtn :title="'Qo’ng’iroq'"
+          ><img class="ml-2" src="/call.svg" alt="Suniy call"
+        /></BorderedBtn>
       </div>
     </div>
     <NuxtImg
       src="/HomeHande.svg"
+      width="100%"
+      height="100%"
+      alt="suniyx, SuniyX"
       class="w-[100vw] sm:w-[100vw] md:w-[100vw] xl:w-[50%] mt-10"
+
     />
   </section>
 
@@ -117,14 +123,18 @@ function strCut(count: number, text: string = "") {
       class="flex md:justify-start lg:justify-start xl:justify-start ml-1 sm:ml-1 md:ml-1 xl:ml-10 w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[50%] xl:w-[50%]"
     >
       <!-- About IMG -->
-      <NuxtImg src="/about.png" class="w-[100%] h-[450px] md:mt-16 lg:mt-1 xl:mt-1" />
+      <NuxtImg
+        src="/about.webp"
+        alt="SuniyX About"
+        class="w-full h-auto sm:h-auto md:h-[440px] xl:h-[460px] mt-10 sm:mt-10 md:mt-16 lg:mt-1 xl:mt-1"
+      />
     </div>
 
     <div
       class="flex flex-col space-y-2 w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[50%] xl:w-[50%] mx-3 sm:mx-3 md:mx-8 xl:mx-8 -order-1 sm:-order-1 md:-order-1 lg:order-2 xl:order-2"
     >
       <h1
-        class="text-[32px] sm:text-[32px] md:text-[44px] xl:text-[54px] leading-[40px] font-semibold font-['Overpass']"
+        class="text-[32px] sm:text-[32px] md:text-[44px] xl:text-[54px] leading-[40px] text-center sm:text-center md:text-start xl:text-end font-semibold font-['Overpass']"
       >
         Biz haqimizda
       </h1>
@@ -142,10 +152,14 @@ function strCut(count: number, text: string = "") {
         o'zimizga bo'lgan talabimizni oshiradi. Biz ming yillik insoniy
         an'analarga asoslangan munosabatlar asosida hamkorlik qilamiz.
       </p>
-      <div class="h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div><img src="/call.svg" alt="img"/> 
+      <div class="h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div>
       <div class="pt-[10px] flex space-x-4">
-        <BorderedBtn :title="'Portfolio'" ><img src="/arrow.svg" alt="img"></BorderedBtn>
-        <BorderedBtn :title="'Qo’ng’iroq'" ><img src="/call.svg" alt=""></BorderedBtn>
+        <BorderedBtn :title="'Portfolio'"
+          ><img class="ml-2" src="/arrow.svg" alt="Suniy arrow"
+        /></BorderedBtn>
+        <BorderedBtn :title="'Qo’ng’iroq'"
+          ><img class="ml-2" src="/call.svg" alt="Suniy call"
+        /></BorderedBtn>
       </div>
     </div>
   </section>
@@ -189,7 +203,7 @@ function strCut(count: number, text: string = "") {
     <div
       class="text-white text-center py-12 sm:py-12 md:py-6 xl:py-6 text-[40px] font-semibold font-['Overpass']"
     >
-      Bizning xizmatlar
+      Bizning loyihalar
     </div>
 
     <!-- Card group -->
@@ -217,8 +231,10 @@ function strCut(count: number, text: string = "") {
           class="w-full min-h-[259px] flex flex-wrap bg-gray-800 rounded-[20px] border border-teal-400 py-4 md:py-10 lg:py-10 xl:py-10 px-4 md:px-16 lg:px-16 xl:px-16"
         >
           <div class="w-[100%] sm:w-[100%] md:w-[58%] xl:w-[58%]">
-            <h2 class="text-white text-[30px] sm:text-[30px] md:text-[40px] xl:text-[40px] font-semibold font-['Overpass']">
-              Siz ham ushbu jamoa orasida bo'lishingiz mumkin...
+            <h2
+              class="text-white text-[30px] sm:text-[30px] md:text-[40px] xl:text-[40px] font-semibold font-['Overpass']"
+            >
+              Siz ham SuniyX oilasining bir qismi bo'lishingiz mumkin...
             </h2>
             <div
               class="text-white text-xl font-normal font-['Inter'] leading-relaxed"
@@ -230,26 +246,42 @@ function strCut(count: number, text: string = "") {
           <div
             class="w-auto flex flex-col space-y-4 justify-center items-start md:items-center lg:items-start xl:items-start ml-0 md:ml-0 lg:ml-24 xl:ml-24 my-10 sm:my-10 md:my-0 xl:my-0"
           >
-            <div class="flex  items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
-              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
+            <div
+              class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto"
+            >
+              <div
+                class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0"
+              ></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Big data
               </div>
             </div>
-            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
-              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
+            <div
+              class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto"
+            >
+              <div
+                class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0"
+              ></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Ved development
               </div>
             </div>
-            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
-              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
+            <div
+              class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto"
+            >
+              <div
+                class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0"
+              ></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 AI ingineering
               </div>
             </div>
-            <div class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto">
-              <div class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0 "></div>
+            <div
+              class="flex items-center space-x-2 h-[35px] sm:h-[35px] md:h-auto xl:h-auto"
+            >
+              <div
+                class="w-[50px] h-0.5 bg-zinc-300 rotate-90 sm:rotate-90 md:rotate-0 xl:rotate-0"
+              ></div>
               <div class="text-white text-xl font-semibold font-['Inter']">
                 Android & IOS
               </div>

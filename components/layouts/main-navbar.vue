@@ -1,4 +1,5 @@
 <script setup>
+const { locale } = useI18n()
 const sitebar = ref(true)
 const responsive = ref(null)
 
@@ -68,7 +69,7 @@ onBeforeUnmount(()=>{
                 <BorderedBtn title="Buyurtma berish"/>
                 <SharedDropdown class="mt-3 sm:mt-3 md:mt-0 xl:mt-0 w-auto">
                     <NuxtImg src="/lang.svg" width="30" /> 
-                    <span class="ml-2">RU</span>
+                    <span class="ml-2">{{ locale.toUpperCase() }} </span>
                 </SharedDropdown>
             </div>
         </div>
