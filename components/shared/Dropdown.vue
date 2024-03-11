@@ -30,6 +30,10 @@ function getItem(item) {
   localStorage.setItem("lang", item)
   locale.value = item
 }
+onMounted(() => {
+  console.log('moun', route.fullPath);
+  localStorage.getItem('lang') ? locale.value = localStorage.getItem('lang') : ""
+})
 
 watch(()=>route.fullPath,() => {
   console.log('router');
