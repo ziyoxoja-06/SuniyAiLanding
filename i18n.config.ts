@@ -1,13 +1,14 @@
+import en from "./lang/en"
+import ru from "./lang/ru"
+import uz from "./lang/uz"
+
 export default defineI18nConfig(() => ({
     legacy: true,
     locale: 'en',
     messages: {
-      en: {
-        welcome: 'Welcome'
-      },
-      ru: {
-        welcome: 'Bienvenue'
-      }
+      en,
+      ru,
+      uz
     }
   }))
   

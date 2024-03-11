@@ -1,7 +1,10 @@
 <script setup>
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const sitebar = ref(true)
 const responsive = ref(null)
+function capitalizeFirstLetter(text) {
+    return  `${text.charAt(0).toUpperCase()}${text.slice(1)}`
+}
 
 function responsiveFn() {
     responsive.value = window.innerWidth
@@ -55,18 +58,18 @@ onBeforeUnmount(()=>{
             
             <div class="w-full sm:w-full md:w-auto xl:w-auto  h-full sm:h-full md:h-auto xl:h-auto flex items-center  md:space-x-4 xl:space-x-4 flex-col sm:flex-col md:flex-row xl:flex-row">
                 <NuxtLink  @click="sitebar=true" to="#home" class="py-4 sm:py-4 md:py-2 xl:py-0 my-1 mt-5 sm:my-2 sm:mt-5 md:my-2 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
-                    Home 
+                    {{capitalizeFirstLetter(t("navbar.home"))}}
                 </NuxtLink>
                 <NuxtLink @click="sitebar=true" to="#about" class="py-4 sm:py-4 md:py-2 xl:py-0 my-1 sm:my-2 md:my-2 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
-                    About
+                    {{capitalizeFirstLetter(t("navbar.about"))}}
                 </NuxtLink>
                 <NuxtLink @click="sitebar=true" to="#services" class="py-4 sm:py-4 md:py-2 xl:py-0 my-1 sm:my-2 md:my-2 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
-                    Services
+                    {{capitalizeFirstLetter(t("navbar.services"))}}
                 </NuxtLink>
                 <NuxtLink @click="sitebar=true" to="#partfoliyo" class="py-4 sm:py-4 md:py-2 xl:py-0 my-1 sm:my-2 md:my-2 xl:my-0 flex justify-center transition-all  duration-700 rounded-md w-full sm:w-full md:w-auto xl:w-auto hover:dark:bg-gray-500 sm:hover:dark:bg-gray-500 md:hover:dark:bg-gray-900 xl:hover:dark:bg-gray-900">
-                    Partfoliyo
+                    {{capitalizeFirstLetter(t("navbar.partfolio"))}}
                 </NuxtLink>
-                <BorderedBtn title="Buyurtma berish"/>
+                <BorderedBtn :title="capitalizeFirstLetter(t('navbar.ordering'))"/>
                 <SharedDropdown class="mt-3 sm:mt-3 md:mt-0 xl:mt-0 w-auto">
                     <NuxtImg src="/lang.svg" width="30" /> 
                     <span class="ml-2">{{ locale.toUpperCase() }} </span>

@@ -24,6 +24,7 @@ export default defineNuxtConfig({
           rel: 'canonical',
           href: 'https://suniyx.uz/',
         },
+        { rel: 'icon', type: 'image/png', href: '/images/suniyX.png' }
       ],
     }
   },
