@@ -16,11 +16,11 @@ const props = defineProps({
 })
 </script>
 <template>
-  <button :id="id" :class="classEl">{{ props?.title }} <slot ></slot></button>
+  <button :class="classEl+' '+id ">{{ props?.title }} <slot ></slot></button>
 </template>
 
 <style scoped >
-#btn_left {
+.btn_left {
   padding: 5px 15px;
   position: relative;
   display: inline-flex;
@@ -38,7 +38,7 @@ const props = defineProps({
   z-index: 1;
 }
 
-#btn_left::before {
+.btn_left::before {
   content: '';
   position: absolute;
   top: 0;
@@ -52,12 +52,12 @@ const props = defineProps({
   z-index: -1;
 }
 
-#btn_left:hover::before {
+.btn_left:hover::before {
   width: 100%;
   color: #fff;
 }
 
-#btn_right {
+.btn_right {
   padding: 5px 15px;
   position: relative;
   display: inline-flex;
@@ -75,7 +75,7 @@ const props = defineProps({
   z-index: 1;
 }
 
-#btn_right::before {
+.btn_right::before {
   content: '';
   position: absolute;
   top: 0;
@@ -89,15 +89,15 @@ const props = defineProps({
   z-index: -1;
 }
 
-#btn_right:hover::before {
+.btn_right:hover::before {
   width: 100%;
 }
 
-#btn_right:hover {
+.btn_right:hover {
   color: #fff;
 }
 
-#btn_full {
+.btn_full {
   padding: 5px 15px;
   position: relative;
   display: inline-flex;
@@ -115,7 +115,7 @@ const props = defineProps({
   z-index: 1;
 }
 
-#btn_full::before {
+.btn_full::before {
     content: '';
     position: absolute;
     top: 0;
@@ -128,10 +128,10 @@ const props = defineProps({
     transition: 1s;
     z-index: -1;
   }
-#btn_full:hover::before {
+.btn_full:hover::before {
     width: 100%;
   }
-#btn_full:hover {
+.btn_full:hover {
     color: #00abf0;
   }
 </style>

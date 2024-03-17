@@ -24,8 +24,8 @@ onBeforeUnmount(()=>{
     :class="responsive<740&&sitebar?'h-[70px] sm:h-[10vh] md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0':'h-full sm:h-full md:h-[10vh] xl:h-[10vh] pt-3 sm:pt-3 md:pt-0 xl:pt-0'">
         <div class="container  mx-auto flex flex-col sm:flex-col md:flex-row xl:flex-row items-center h-full justify-between">
             <div class="w-full sm:w-full md:w-auto xl:w-auto flex justify-between ">
-              <NuxtLink to="/" class="flex items-center">
-                <NuxtImg src="/logo.svg" width="100" />
+              <NuxtLink to="https://suniyx.uz/" class="flex items-center">
+                <NuxtImg src="/logo.svg" alt="SuniyX logo" width="100" />
             </NuxtLink>  
             <button
             @click="sitebar=!sitebar"
@@ -68,7 +68,7 @@ onBeforeUnmount(()=>{
                 </NuxtLink>
                 <SharedAnimationBtn title="Buyurtma berish" />
                 <SharedDropdown class="mt-3 sm:mt-3 md:mt-0 xl:mt-0 w-auto">
-                    <NuxtImg src="/lang.svg" width="30" /> 
+                    <NuxtImg src="/lang.svg" alt="lang" width="30" /> 
                     <span class="ml-2">Ru</span>
                 </SharedDropdown>
             </div>

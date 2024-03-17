@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
 const router = useRouter()
-const services:any = [
+const services: any = [
   {
     img: "/images/service/Layer_1.svg",
     title_uz: "Katta ma’lumotlar",
@@ -27,8 +27,8 @@ const services:any = [
   {
     img: "/images/service/Layer_3.svg",
     title_uz: "Veb rivojlantirish",
-    title_ru:"Веб-разработка",
-    title_en:"Web development",
+    title_ru: "Веб-разработка",
+    title_en: "Web development",
     text_uz: `SuniyX-dan  maxsus veb-ishlab chiqish xizmatlari bilan biznesni rivojlantirish uchun endi internetda noyob ta'sir o'tkazing.Biz korporativ veb-saytlardan veb-ilovalarga qadar yuqori sifatli veb-sytlarni ishlab chiqamiz.
 `,
     text_ru: "Окажите уникальное влияние на Интернет прямо сейчас, чтобы развивать свой бизнес с помощью индивидуальных услуг веб-разработки от SuniyX. Мы разрабатываем высококачественные веб-сайты, от корпоративных веб-сайтов до веб-приложений.",
@@ -37,8 +37,8 @@ const services:any = [
   {
     img: "/images/service/Layer_4.svg",
     title_uz: "AI muhandisligi",
-    title_ru:"AI-инжиниринг",
-    title_en:"AI engineering",
+    title_ru: "AI-инжиниринг",
+    title_en: "AI engineering",
     text_uz: `Korxonalarga keyingi katta qadam tashlashga va tezda Google Play-ning eng yaxshi jadvallariga ko'tarilishga yordam beradigan Android ilovalarini ishlab chiqamiz.Biz tengsiz foydalanuvchi tajribasi bilan ajralib turadigan mahalliy iOS ilovalarini yaratamiz.
 `,
     text_ru: "Мы разрабатываем приложения для Android, которые помогают компаниям сделать следующий большой шаг и быстро подняться на вершину рейтинга Google Play. Мы создаем нативные приложения для iOS с беспрецедентным пользовательским интерфейсом.",
@@ -90,7 +90,7 @@ function capitalizeFirstLetter(text: string) {
 <template>
   <!-- HERO SECTION  -->
   <section id="home"
-    class="flex items-center flex-col sm:flex-col md:flex-col xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C] bg-[url('baseBg.svg')]">
+    class="flex items-center flex-col sm:flex-col md:flex-col xl:flex-row min-h-[100vh] pt-[10vh] gap-4 bg-[#1E212C] bg-[url('baseBg.webp')]">
     <div
       class="px-4 sm:px-9 md:px-10 xl:px-10 md:pl-10 xl:pl-10 pt-20 sm:pt-20 md:pt-20 xl:pt-0 flex flex-col space-y-3 w-[100%] sm:w-[100%] md:[100%] xl:w-[50%]">
       <h1
@@ -102,13 +102,18 @@ function capitalizeFirstLetter(text: string) {
         {{ t("subtitle") }}
       </p>
       <div class="w-[90vw] sm:w-[90vw] md:w-[40vw] xl:w-[40vw] h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div>
-      <div class="pt-[10px] flex space-x-4">
-        <div @click="router.push('#partfoliyo')"><BorderedBtn :title="t('partfolio')"><img class="ml-2" src="/arrow.svg" alt="Suniy arrow" /></BorderedBtn></div>
-        <BorderedBtn :title="t('call')"><img class="ml-2" src="/call.svg" alt="Suniy call" /></BorderedBtn>
+      <div class="pt-[10px] flex space-x-4 w-full">
+        <div @click="router.push('#partfoliyo')">
+          <BorderedBtn :title="t('partfolio')"><img class="ml-2" width="36" height="100" src="/arrow.svg"
+              alt="Suniy Ai arrow" />
+          </BorderedBtn>
+        </div>
+        <BorderedBtn :title="t('call')"><img class="ml-2" width="26" height="100" src="/call.svg" alt="Suniy Ai call" />
+        </BorderedBtn>
       </div>
     </div>
-    <NuxtImg src="/HomeHande.svg" width="100%" height="100%" alt="suniyx, SuniyX"
-      class="w-[100vw] sm:w-[100vw] md:w-[100vw] xl:w-[50%] mt-10" />
+    <NuxtImg src="/HomeHande.webp" alt="SuniyX Ai" width="undefined" height="undefined"
+      class="w-[99%] sm:w-[99%] md:w-[100%] xl:w-[50%] h-full mt-10" />
   </section>
 
   <!-- About start-->
@@ -117,8 +122,12 @@ function capitalizeFirstLetter(text: string) {
     <div
       class="flex md:justify-start lg:justify-start xl:justify-start ml-1 sm:ml-1 md:ml-1 xl:ml-10 w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[50%] xl:w-[50%]">
       <!-- About IMG -->
-      <NuxtImg src="/about.webp" alt="SuniyX About"
-        class="w-full h-auto sm:h-auto md:h-[440px] xl:h-[460px] mt-10 sm:mt-10 md:mt-16 lg:mt-1 xl:mt-1" />
+      <div
+        class="w-full h-auto sm:h-auto md:h-[440px] xl:h-[460px] mt-10 sm:mt-10 md:mt-16 lg:mt-1 xl:mt-1 rounded-xl ">
+        <NuxtImg src="/about.webp" alt="SuniyX Ai About" width="undefined" height="undefined"
+          class="h-full w-full rounded-xl" />
+      </div>
+
     </div>
 
     <div
@@ -136,7 +145,9 @@ function capitalizeFirstLetter(text: string) {
       </p>
       <div class="h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-800"></div>
       <div class="pt-[10px] flex space-x-4">
-        <div @click="router.push('#partfoliyo')"><BorderedBtn :title="t('partfolio')"><img class="ml-2" src="/arrow.svg" alt="Suniy arrow" /></BorderedBtn></div>
+        <div @click="router.push('#partfoliyo')">
+          <BorderedBtn :title="t('partfolio')"><img class="ml-2" src="/arrow.svg" alt="Suniy arrow" /></BorderedBtn>
+        </div>
         <BorderedBtn :title="t('call')"><img class="ml-2" src="/call.svg" alt="Suniy call" /></BorderedBtn>
       </div>
     </div>
@@ -152,7 +163,8 @@ function capitalizeFirstLetter(text: string) {
       <div
         class="rounded-[20px] flex w-[38em] flex-col items-center p-6 sm:p-6 md:p-10 xl:p-10 px-6 sm:px-6 md:px-5 xl:px-5 border border-blue-600 m-3"
         v-for="item in services" :key="item?.img">
-        <img :src="item?.img" alt="logo" />
+        <NuxtImg :src="item?.img" :alt="item[`title_${locale}`]" class="w-[54px] h-[54px] mb-3" width="54px"
+          height="54px" />
         <div class="text-white text-3xl font-semibold font-['Inter']">
           {{ item[`title_${locale}`] }}
         </div>
@@ -176,7 +188,7 @@ function capitalizeFirstLetter(text: string) {
       <div v-for="item in partfoliyo" :key="item.title"
         class="card w-[300px] relative rounded-xl overflow-hidden border m-3 border-gray-600">
         <div class="h-[200px]">
-          <NuxtImg :src="item.img" class="h-full" />
+          <NuxtImg :src="item.img" :alt="item.title" class="w-full h-full" />
         </div>
         <div class="p-4">
           <h2 class="font-bold text-xl pb-2">{{ item.title }}</h2>
@@ -236,7 +248,7 @@ function capitalizeFirstLetter(text: string) {
     <div class="w-full shadow border border-gray-800"></div>
     <div class="flex flex-wrap px-10">
       <div class="w-[100%] sm:w-[100%] md:w-[40%] xl:w-[40%] h-auto py-5">
-        <NuxtImg src="/logo.svg" width="180" />
+        <NuxtImg src="/logo.svg" alt="SuniyX logo" width="180" />
         <div
           class="w-[100%] sm:w-[100%] md:w-[100%] xl:w-[400px] h-[71.90px] text-white text-3xl mt-5 font-semibold font-['Inter']">
           {{ t('problem_solve') }}
@@ -262,12 +274,12 @@ function capitalizeFirstLetter(text: string) {
         <!-- icons group -->
         <div class="flex space-x-12 mt-5">
           <div class="flex items-center space-x-2">
-            <img src="/telegram.svg" class="w-11 h-11" />
+            <img src="/telegram.svg" alt="telegram" class="w-11 h-11" />
             <span
               class="text-white text-[16px] sm:text-[16px] md:text-[22px] xl:text-[22px] font-semibold font-['Inter']">Telegram</span>
           </div>
           <div class="flex items-center space-x-2">
-            <img src="/instagram.svg" class="w-11 h-11" />
+            <img src="/instagram.svg" alt="instagram" class="w-11 h-11" />
             <span
               class="text-white text-[16px] sm:text-[16px] md:text-[22px] xl:text-[22px] font-semibold font-['Inter']">Instagram</span>
           </div>
@@ -275,12 +287,12 @@ function capitalizeFirstLetter(text: string) {
         <!-- icons group -->
         <div class="flex space-x-12 mt-5">
           <div class="flex items-center space-x-2">
-            <img src="/facebook.svg" class="w-11 h-11" />
+            <img src="/facebook.svg" alt="facebook" class="w-11 h-11" />
             <span
               class="text-white text-[16px] sm:text-[16px] md:text-[22px] font-semibold font-['Inter']">Facebook</span>
           </div>
           <div class="flex items-center space-x-2">
-            <img src="/youtube.svg" class="w-11 h-11" />
+            <img src="/youtube.svg" alt="youtube" class="w-11 h-11" />
             <span class="text-white text-[16px] sm:text-[16px] md:text-[22px] font-semibold font-['Inter']">You
               Tube</span>
           </div>

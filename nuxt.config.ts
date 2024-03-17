@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   app:{
     head:{
       title: 'SuniyX - Yaxshi Texnologiyalar',
+      htmlAttrs:{
+        lang:"uz-UZ",
+        dir:"ltr"
+      },
       meta: [
         {
           name: 'description',
